@@ -1,0 +1,13 @@
+calendarios\Calendario.class
+calendarios\eventos\repeticion\Semanal.class
+calendarios\servicios\PositionService.class
+calendarios\eventos\repeticion\Anual.class
+calendarios\eventos\EventoRecurrente.class
+calendarios\servicios\ShemailLib.class
+calendarios\eventos\Evento.class
+calendarios\Ubicacion.class
+calendarios\Usuario.class
+calendarios\eventos\repeticion\Mensual.class
+calendarios\servicios\GugleMapas.class
+calendarios\eventos\repeticion\Diaria.class
+calendarios\eventos\repeticion\Repeticion.class
