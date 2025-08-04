@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.atributos.Formalidad;
 import org.example.atributos.TipoDePrenda;
 import org.example.atributos.Trama;
 
@@ -11,6 +12,7 @@ class Borrador {
   private String colorPrimario;
   private String colorSecundario = null;
   private Trama trama = Trama.LISA; //es lisa por default
+  private Formalidad formalidad;
 
   public Borrador(TipoDePrenda tipo) {
     validateNonNull(tipo);
@@ -32,7 +34,7 @@ class Borrador {
   }
 
   public Prenda crearPrenda() {
-    return new Prenda(tipo, material, colorPrimario, colorSecundario, trama);
+    return new Prenda(tipo, material, colorPrimario, colorSecundario, trama, formalidad);
   }
 
   private void validateNonNull(Object parametro) {
