@@ -4,19 +4,19 @@ import org.example.atributos.TipoDePrenda;
 import org.example.atributos.Trama;
 
 public class Prenda {
-  private TipoDePrenda tipo;
-  private String material;
-  private String colorPrimario;
-  private String colorSegundario = null;
-  private Trama trama;
+  private final TipoDePrenda tipo;
+  private final String material;
+  private final String colorPrimario;
+  private final String colorSecundario;
+  private Trama trama = Trama.LISA; //es lisa por default
 
   // Constructor
 
-  public Prenda(TipoDePrenda tipo, String material, String colorPrimario, String colorSegundario, Trama trama) {
+  public Prenda(TipoDePrenda tipo, String material, String colorPrimario, String colorSecundario, Trama trama) {
     this.tipo = tipo;
     this.material = material;
     this.colorPrimario = colorPrimario;
-    this.colorSegundario = colorSegundario;
+    this.colorSecundario = colorSecundario;
     this.trama = trama;
   }
 
@@ -30,6 +30,7 @@ public class Prenda {
 
   public String getColorPrimario() { return colorPrimario; }
 
-  public String getColorSegundario() { return colorSegundario; }
+  public String getColorSegundario() { return colorSecundario; }
+
 
 }
