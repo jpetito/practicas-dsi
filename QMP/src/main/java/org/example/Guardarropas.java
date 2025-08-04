@@ -26,28 +26,4 @@ public class Guardarropas { //SINGLETON
     return new ArrayList<>(this.prendas.stream().filter(Prenda::esCalzado).toList());
   }
 
-  public Atuendo sugerenciaAleatoria() {
-    Prenda s = getPrendasSuperiores()
-        .get(random.nextInt(getPrendasSuperiores().size()));
-    Prenda i = getPrendasInferiores()
-        .get(random.nextInt(getPrendasInferiores().size()));
-    Prenda c = getCalzados()
-        .get(random.nextInt(getCalzados().size()));
-    return new Atuendo(s, i, c);
-  }
-
-  public Atuendo sugerenciaFormal(){
-    Prenda s = getPrendasSuperiores().stream()
-        .filter(p -> p.getFormalidad() == Formalidad.FORMAL)
-        .findAny().orElseThrow(() -> new IllegalStateException("No hay prendas formales disponibles"));
-    Prenda i = getPrendasInferiores().stream()
-        .filter(p -> p.getFormalidad() == Formalidad.FORMAL)
-        .findAny().orElseThrow(() -> new IllegalStateException("No hay prendas formales disponibles"));
-    Prenda c = getCalzados().stream()
-        .filter(p -> p.getFormalidad() == Formalidad.FORMAL)
-        .findAny().orElseThrow(() -> new IllegalStateException("No hay prendas formales disponibles"));
-    return new Atuendo(s, i, c);
-  }
-
-
 }
