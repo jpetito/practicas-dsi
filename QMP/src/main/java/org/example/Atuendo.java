@@ -17,10 +17,4 @@ public class Atuendo {
   this.accesorios = accesorios;
   }
 
-  public Atuendo(Prenda parteSuperior, Prenda parteInferior, Prenda calzado) {
-    this.parteSuperior = parteSuperior;
-    this.parteInferior = parteInferior;
-    this.calzado = calzado;
-  }
-
 }

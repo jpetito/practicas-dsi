@@ -10,16 +10,16 @@ import java.util.List;
 public class SugerenciasTodasLasCombinaciones implements MotorDeSugerencias {
 
   @Override
-  public List<Atuendo> generarSugerencias(Guardarropas g) {
+  public List<Sugerencia> generarSugerencias(Guardarropas g) {
     List<Prenda> sup = g.getPrendasSuperiores();
     List<Prenda> inf = g.getPrendasInferiores();
     List<Prenda> cal = g.getCalzados();
 
-    List<Atuendo> resultado = new ArrayList<>();
+    List<Sugerencia> resultado = new ArrayList<>();
     for (Prenda s : sup) {
       for (Prenda i : inf) {
         for (Prenda c : cal) {
-          resultado.add(new Atuendo(s, i, c));
+          resultado.add(new Sugerencia(s, i, c));
         }
       }
     }

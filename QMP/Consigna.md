@@ -86,3 +86,23 @@ Como la investigación no fue concluyente, antes de ir con una apuesta definitiv
 * Como administradore de QuéMePongo, quiero que, si así esta configurado, al generarse las sugerencias, no se ejecute ningún tipo de lógica adicional.
 
 * Como administradore de QuéMePongo, quiero poder cambiar el motor de sugerencias periódicamente entre los existentes (o nuevos) para evaluar cuál genera un mejor efecto sobre los usuarios.
+
+
+## **Cuarta Iteración**
+
+En esta iteración continuaremos trabajando sobre las sugerencias de atuendos:
+
+| *Como usuarie de QuéMePongo, quiero recibir sugerencias de atuendos para vestirme ajustándome a las condiciones climáticas con ropa de mi agrado* |
+| :---- |
+
+En esta oportunidad, atacaremos solamente los siguientes requerimientos específicos:
+
+* Como usuarie de QuéMePongo, quiero poder conocer las condiciones climáticas de Buenos Aires en un momento dado para obtener sugerencias acordes.
+
+* Como usuarie de QuéMePongo, quiero que al generar una sugerencia las prendas sean acordes a la temperatura actual sabiendo que para cada tipo de prenda habrá una temperatura hasta la cual es adecuada. (Ej.: “Remera de mangas largas” no es apta a más de 20°C)
+
+* Como administradore de QuéMePongo, quiero poder configurar fácilmente diferentes servicios de obtención del clima para ajustarme a las cambiantes condiciones económicas.
+
+* Como stakeholder[^1] de QuéMePongo, quiero poder asegurar la calidad de mi aplicación sin incurrir en costos innecesarios.
+
+Además, tras investigar en el mercado encontramos que la conocida empresa AccuWeather provee un *SDK[^2]* para Java que nos entrega una lista con el clima de las próximas 12 horas en un diccionario:
