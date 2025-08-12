@@ -1,8 +1,8 @@
-package org.example;
+package org.example.prenda;
 
-import org.example.atributos.Formalidad;
-import org.example.atributos.TipoDePrenda;
-import org.example.atributos.Trama;
+import org.example.prenda.atributos.Formalidad;
+import org.example.prenda.atributos.TipoDePrenda;
+import org.example.prenda.atributos.Trama;
 
 // PATRON BUILDER --> ya que la construccion es paso a paso, no de golpe.
 
@@ -11,7 +11,7 @@ class Borrador {
   private String material;
   private String colorPrimario;
   private String colorSecundario = null;
-  private Trama trama = Trama.LISA; //es lisa por default
+  private Trama trama = Trama.LISA; // es lisa por default
   private Formalidad formalidad;
 
   public Borrador(TipoDePrenda tipo) {

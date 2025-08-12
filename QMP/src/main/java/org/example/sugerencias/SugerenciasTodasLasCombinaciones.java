@@ -1,11 +1,9 @@
 package org.example.sugerencias;
 
-import org.example.Atuendo;
-import org.example.Guardarropas;
-import org.example.Prenda;
-
 import java.util.ArrayList;
 import java.util.List;
+import org.example.Guardarropas;
+import org.example.prenda.Prenda;
 
 public class SugerenciasTodasLasCombinaciones implements MotorDeSugerencias {
 

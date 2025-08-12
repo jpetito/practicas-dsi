@@ -1,12 +1,10 @@
 package org.example.sugerencias;
 
-//PATRON STRATEGY
-//define el algoritmo de sugerencias
-
-import org.example.Atuendo;
-import org.example.Guardarropas;
+// PATRON STRATEGY
+// define el algoritmo de sugerencias
 
 import java.util.List;
+import org.example.Guardarropas;
 
 public interface MotorDeSugerencias {
 

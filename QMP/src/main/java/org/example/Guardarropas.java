@@ -1,12 +1,11 @@
 package org.example;
 
-import org.example.atributos.Formalidad;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import org.example.prenda.Prenda;
 
-public class Guardarropas { //SINGLETON
+public class Guardarropas { // SINGLETON
   private final Random random = new Random();
   private ArrayList<Prenda> prendas;
 
@@ -25,5 +24,4 @@ public class Guardarropas { //SINGLETON
   public List<Prenda> getCalzados() {
     return new ArrayList<>(this.prendas.stream().filter(Prenda::esCalzado).toList());
   }
-
 }

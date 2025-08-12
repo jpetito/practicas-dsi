@@ -1,4 +1,4 @@
-package org.example.atributos;
+package org.example.prenda.atributos;
 
 public enum Formalidad {
   FORMAL,
