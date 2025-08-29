@@ -1,0 +1,62 @@
+@startuml
+!define table(x) class x << (T,#FFAAAA) >>
+
+table(CANCHA) {
+  id_cancha : int <<PK>>
+  nombre : string
+  iluminacion : boolean
+}
+
+table(COLOR) {
+  id_color : int <<PK>>
+  descripcion : string
+}
+
+table(CONSTRUCTOR) {
+  id_constructor : int <<PK>>
+  nombre : string
+  domicilio : string
+}
+
+table(PALETA) {
+  id_paleta : int <<PK>>
+  nombre : string
+  grosor_mm : int
+  id_color : int <<FK>>
+  id_constructor : int <<FK>>
+}
+
+table(JUGADOR) {
+  id_jugador : int <<PK>>
+  nombre : string
+  apellido : string
+  domicilio : string
+  fecha_nac : date
+}
+
+table(PARTIDO) {
+  id_partido : int <<PK>>
+  fecha_inicio : datetime
+  fecha_fin : datetime
+  id_cancha : int <<FK>>
+  id_color : int <<FK>>  // color de la cancha en ese partido
+  id_jugador_reserva : int <<FK>> // quién reservó
+}
+
+table(JUGADOR_PARTIDO_PALETA) {
+  id_partido : int <<FK>>
+  id_jugador : int <<FK>>
+  id_paleta : int <<FK>>
+  <<PK>> (id_partido, id_jugador)
+}
+
+' Relaciones
+CANCHA ||--o{ PARTIDO : "se juega en"
+COLOR ||--o{ PALETA : "colorea"
+COLOR ||--o{ PARTIDO : "color cancha"
+CONSTRUCTOR ||--o{ PALETA : "fabrica"
+JUGADOR ||--o{ JUGADOR_PARTIDO_PALETA : "participa"
+PARTIDO ||--o{ JUGADOR_PARTIDO_PALETA : "incluye"
+PALETA ||--o{ JUGADOR_PARTIDO_PALETA : "usa"
+JUGADOR ||--o{ PARTIDO : "reserva"
+@enduml
